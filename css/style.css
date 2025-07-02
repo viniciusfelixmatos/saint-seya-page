@@ -1,0 +1,148 @@
+body, html {
+    height: 100%;
+}
+
+
+/* HEADER */
+
+.header-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #161642;
+    max-height: 100px;
+    min-height: 100px;
+    position: fixed;
+    width:100%;
+}
+
+.header-box {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.header-box img {
+    height: 60px;
+}
+
+.header-box ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0;
+    gap: 1rem;
+}
+
+.header-box ul li {
+    display: flex;
+    flex-direction: row;
+}
+
+.header-box ul li a {
+    list-style: none;
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    font-size: 21px;
+    color: #DDD627;
+    transition: all 0.4s;
+}
+
+.header-box ul li a:hover {
+    transform: scale(1.05)
+}
+
+/* HOME */
+
+.home-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3)), url('/images/destaqueone.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.home-content {
+    display: flex;
+    flex-direction: row;
+    gap: 180px;
+}
+
+.home-intro {
+    display: flex;
+    flex-direction: column;
+}
+
+.home-intro p {
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    font-size: 72px;
+    color: #F7F7F7;
+}
+
+.btn-default {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Montserrat", sans-serif;
+    cursor: pointer;
+    max-height: 40px;
+    min-height: 40px;
+    color: #05050F;
+    max-width: 115px;
+    text-decoration: none;
+    background-color: #DDD627;
+    border: 1px solid black;
+    border-radius: 36px;
+    font-size: 1rem;
+    transition: all 0.4s;
+}
+
+.btn-default:hover {
+    transform: scale(1.05);
+}
+
+.btn-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.btn-home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 30px;
+    font-size: 1rem;
+    color: #DDD627;
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid #DDD627;
+    border-radius: 50%;
+    transition: all 0.4s;
+    cursor: pointer;
+    backdrop-filter: blur(5px);
+}
+
+.btn-home:hover {
+    background-color: #DDD627;
+    color: #05050F;
+}
+
+/* HEADER MEDIA QUERIES */
+
+@media (max-width: 425px) {
+    .header-box img {
+        height: 40px;
+    }
+}

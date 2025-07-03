@@ -14,6 +14,7 @@ body, html {
     min-height: 100px;
     position: fixed;
     width:100%;
+    z-index: 2;
 }
 
 .header-box {
@@ -27,7 +28,7 @@ body, html {
     height: 60px;
 }
 
-.header-box ul {
+.nav-links {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -36,12 +37,12 @@ body, html {
     gap: 1rem;
 }
 
-.header-box ul li {
+.nav-links li {
     display: flex;
     flex-direction: row;
 }
 
-.header-box ul li a {
+.nav-links li a {
     list-style: none;
     text-decoration: none;
     font-family: "Montserrat", sans-serif;
@@ -63,10 +64,6 @@ body, html {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3)), url('/images/destaqueone.png');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 .home-content {
@@ -137,6 +134,52 @@ body, html {
 .btn-home:hover {
     background-color: #DDD627;
     color: #05050F;
+}
+
+.item {
+    height: 100%;
+    width: 100%;
+}
+
+.owl-dots {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    gap: 20px;
+    right: 0px;
+    top: 50%;
+}
+
+.owl-dot span {
+    height: 30px !important;
+    width: 30px !important;
+    backdrop-filter: blur (5px);
+    border: 1px solid #DDD627;
+    background: transparent !important;
+}
+
+.home-box {
+    display: flex;
+}
+
+/* FOOTER */
+
+.footer-box {
+    display: flex;
+    align-items: center;
+    min-height: 100px;
+}
+
+.nav-links footer {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 /* HEADER MEDIA QUERIES */

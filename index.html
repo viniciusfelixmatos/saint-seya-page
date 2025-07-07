@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- BOOTSTRAP -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <!-- GOOGLE FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,7 +13,6 @@
     <!-- OWL CAROUSEL -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
-    
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
    
@@ -30,36 +30,26 @@
                     <li><a href="#">As 12 casas</a></li>
                     <li><a href="#">Seja um cavaleiro!</a></li>
                 </ul>
+                <div class="hamburguer-menu">
+                    <i class="bi bi-list"></i>
+                </div>
             </div>
         </div>
     </header>
     <main>
         <section class="home-section" id="home-ca">
-            <div class="container-fluid p-0" home-box>
-                    <div class="owl-carousel owl-theme" id="carousel-home">
-                        <div class="item"><img src="/images/destaqueone.png" alt=""></div>
-                        <div class="item"><img src="/images/destaque 2.png" alt=""></div>
-                        <div class="item"><img src="/images/destaque 3.png" alt=""></div>
-                        <div class="item"><img src="/images/destaque 4.png" alt=""></div>
-                    </div>
+            <div class="home-box">
+                <div class="owl-carousel owl-theme">
+                    <div class="item destaque-1"></div>
+                    <div class="item destaque-2"></div>
+                    <div class="item destaque-3"></div>
+                    <div class="item destaque-4"></div>
+                </div>
             </div>
         </section>
     </main>
-    <footer class="footer-box">
-        <div class="container-xl footer-content">
-            <img src="/images/logo.png" alt="">
-            <ul class="nav-links footer">
-                <li><a href="#">Cavaleiros de Atena</a></li>
-                <li><a href="#">Os 88 cavaleiros</a></li>
-                <li><a href="#">Os 12 dourados</a></li>
-                <li><a href="#">As 12 casas</a></li>
-                <li><a href="#">Seja um cavaleiro!</a></li>
-            </ul>
-        </div>
-    </footer>
-
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <script src="/js/script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

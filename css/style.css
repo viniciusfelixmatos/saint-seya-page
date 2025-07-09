@@ -15,7 +15,7 @@ body, html {
     min-height: 100px;
     position: fixed;
     width:100%;
-    z-index: 2;
+    z-index: 3;
 }
 
 .hamburguer-menu {
@@ -80,6 +80,7 @@ body, html {
 /* HOME */
 .home-section {
     height: 100vh;
+    background: transparent linear-gradient(180deg, #05050F00 0%, #05050F 100%) 0% 0% no-repeat padding-box;
 }
 
 .home-box {
@@ -100,6 +101,7 @@ body, html {
     align-items: center;
     height: 100%;
     width: 100%;
+    z-index:1;
 }
 
 .owl-dots {
@@ -107,16 +109,30 @@ body, html {
     display: flex;
     flex-direction: column; /* vertical */
     position: absolute;
+    gap: 30px;
     right: 20px;
     z-index: 1;
 }
 
 .owl-theme .owl-dots .owl-dot span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(5px);
+    margin: 0;
     border: 1px solid #DDD627;
     height: 1.875rem;
     width: 1.875rem;
+    color: #DDD627;
+}
+
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+    color: #05050F;
+}
+
+.owl-theme .owl-dots .owl-dot span::after {
+    content: counter(count 1);
 }
 
 .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
@@ -152,9 +168,72 @@ body, html {
     background-image: url('../images/destaquequatro.png');
 }
 
+.box-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    height: 100%;
+    z-index: 2;
+    align-items: baseline;
+}
+
+
+.box-text h2 {
+    max-width: 1030px;
+    font-size: 72px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    color: #FFF;
+    text-align: left;
+
+}
+
+.btn-primary {
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    color: #05050F;
+    background-color: #DDD627;
+    border-color: #DDD627;
+    border-radius: 36px;
+}
+
+.btn:hover {
+    background-color: #DDD627;
+}
+
+@media (max-width: 1024px) {
+
+    .nav-links li a{
+        font-size: 16px;
+    }
+
+    .box-text {
+        max-width: 920px;
+    }
+}
+
 @media (max-width: 768px) {
+
     .nav-links {
         display: none;
+    }
+
+    .nav-links.active {
+        display: flex !important;
+        gap: 24px !important;
+        flex-direction: column;
+        top: 100px;
+        right: 20px;
+        z-index: 3;
+        position: absolute;
+        display: block;
+        align-items: baseline;
+    }
+
+    .nav-links.active li {
+        text-align: left;
+        font-size: 21px;
     }
 
     .hamburguer-menu {

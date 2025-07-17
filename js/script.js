@@ -11,6 +11,8 @@ document.getElementById('btn-menu').addEventListener('click', function() {
     center: true,
     margin:10,
     dots: true,
+    touchDrag: false,
+    mouseDrag: false,
     responsive:{
         0:{
             items:1

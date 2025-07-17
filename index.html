@@ -19,35 +19,58 @@
     <title>Saint Seya</title>
 </head>
 <body>
-    <header class="header-area">
-        <div class="container-xl header-content">
-            <div class="header-box">
-                <img src="images/logo.png" alt="logo Saint Seya">
-                <ul class="nav-links">
+    <header class="header-nav">
+        <section class="header-nav__container container-xl">
+            <div class="header-nav__content">
+                <h1 class="header-nav__logo">
+                    <img src="images/logo.png" alt="Saint Seiya Logo" class="logo">
+                </h1>
+                <div class="header-nav__btn" id="btn-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="header-nav__list" id="nav-list">
                     <li><a href="#">Cavaleiros de Atena</a></li>
                     <li><a href="#">Os 88 cavaleiros</a></li>
                     <li><a href="#">Os 12 dourados</a></li>
                     <li><a href="#">As 12 casas</a></li>
                     <li><a href="#">Seja um cavaleiro!</a></li>
                 </ul>
-                <div class="hamburguer-menu">
-                    <i class="bi bi-list"></i>
-                </div>
-            </div>
-        </div>
-    </header>
-    <main>
-        <section class="home-section" id="home-ca">
-            <div class="home-box">
-                <div class="owl-carousel owl-theme">
-                    <div class="item destaque-1"></div>
-                    <div class="item destaque-2"></div>
-                    <div class="item destaque-3"></div>
-                    <div class="item destaque-4"></div>
-                </div>
             </div>
         </section>
+    </header>
+
+    <main>
+        <section class="home">
+            <div class="owl-carousel owl-theme home-carousel">
+                <div class="item-one__carousel background__carousel"></div>
+                <div class="item-two__carousel background__carousel"></div>
+                <div class="item-three__carousel background__carousel"></div>
+                <div class="item-four__carousel background__carousel"></div>
+            </div>
+
+            <div class="home__container container-xl">
+                <h2>Conheça os Cavaleiros de Bronze, a base do exército da deusa Atena</h2>
+                <a>Veja mais</a>
+            </div>
+
+        </section>
     </main>
+
+    <footer></footer>
+
+    <script>
+        function contador () {
+        const buttonsowl = document.querySelectorAll(".owl-dot");
+        console.log(buttonsowl);
+
+        for (var i = 0; i < buttonsowl.length; i++) {
+            console.log(i)
+        }
+    }
+    </script>
+
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="js/script.js"></script>

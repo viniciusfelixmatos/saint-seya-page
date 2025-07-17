@@ -1,5 +1,12 @@
-document.addEventListener("DOMContentLoaded", function() {
-    $('.owl-carousel').owlCarousel({
+document.getElementById('btn-menu').addEventListener('click', function() {
+    this.classList.toggle('active');
+
+    // Alterna visibilidade do menu
+    const menu = document.getElementById('nav-list');
+    menu.classList.toggle('show');
+  });  
+
+    $('.home-carousel').owlCarousel({
     loop:true,
     center: true,
     margin:10,
@@ -15,5 +22,13 @@ document.addEventListener("DOMContentLoaded", function() {
             items:1
         }
     }
-    });
 });
+
+const buttonsowl = document.querySelectorAll(".owl-dot span");
+    let i = 0;
+    for (i; i < buttonsowl.length; i++) {
+        console.log(i)
+        console.log(buttonsowl[i])
+        buttonsowl[i].innerHTML = i+1;
+    };
+

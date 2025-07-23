@@ -28,15 +28,31 @@ document.getElementById('btn-menu').addEventListener('click', function() {
 
 $('.characters-carousel').owlCarousel({
     loop: false,
-    center: false,
-    margin: 10,
+    center: true,
+    margin: 20,
     dots: false,
+    autoWidth:true,
     touchDrag: true,
     mouseDrag: true,
-    responsive:{
-        0:{ items:1 },
-        600:{ items:1 },
+    responsive: {
+        320: { items: 2},
+        600:{ items:3 },
         1000:{ items:6 }
+    }
+});
+
+$('.houses-carousel').owlCarousel({
+    loop: false,
+    center: true,
+    margin: 20,
+    dots: false,
+    nav: true,
+    navText: [$('.am-next'),$('.am-prev')],
+    autoWidth:true,
+    touchDrag: true,
+    mouseDrag: true,
+    responsive: {
+        1000:{ items:1 }
     }
 });
 

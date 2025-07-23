@@ -5,7 +5,7 @@
     --color-primary-dark: #3838A8;
     --color-primary-darker: #272775;
     --color-primary-deepest: #161642;
-    --color-transparent-dark: #05050F00;
+    --color-transparent-dark: #05050F;
     --color-accent: #DDD627;
     --color-white: #FFFFFF;
     --font-primary: 'Montserrat', sans-serif;
@@ -27,7 +27,7 @@
     height: 6.25rem;
     position: fixed;
     width:100%;
-    z-index: 2;
+    z-index: 4;
 }
 
 .hamburguer-menu {
@@ -87,11 +87,6 @@
 
 /* HEADER == BTN */
 
-/* HOME */
-.home-section {
-    height: 100vh;
-}
-
 .header-nav__mobile {
     display: flex;
     flex-direction: column;
@@ -107,40 +102,48 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
+    position: relative;
+    overflow: hidden;
 }
 
-
-.background__carousel {
-    height: 100vh;
-    width: 100vw;
-}
-
-.item-one__carousel {
-    background-image: url('../images/destaqueone.png');
-}
-
-.item-two__carousel {
-    background-image: url('../images/destaquedois.png');
-}
-
-.item-three__carousel {
-    background-image: url('../images/destaquetres.png');
-}
-
-.item-four__carousel {
-    background-image: url('../images/destaquequatro.png');
-}
-
-.owl-carousel.owl-theme {
+.home-carousel.owl-carousel.owl-theme {
     display: flex;
     position: absolute;
     justify-content: center;
     align-items: center;
     height: 100%;
     width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
 }
 
-.owl-dots {
+.home-carousel .background__carousel {
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Imagens de fundo para cada slide */
+.home-carousel .item-one__carousel {
+    background-image: url('../images/destaqueone.png');
+}
+
+.home-carousel .item-two__carousel {
+    background-image: url('../images/destaquedois.png');
+}
+
+.home-carousel .item-three__carousel {
+    background-image: url('../images/destaquetres.png');
+}
+
+.home-carousel .item-four__carousel {
+    background-image: url('../images/destaquequatro.png');
+}
+
+.home-carousel .owl-dots {
     display: flex;
     flex-direction: column;
     position: absolute;
@@ -150,15 +153,15 @@
     width: 100%;
     max-width: 1320px;
     height: 100%;
-    /* right: 20px; */
-    z-index: 1;
+    pointer-events: all;
+    z-index: 3;
 }
 
-.owl-theme .owl-nav.disabled+.owl-dots {
+.home-carousel.owl-theme .owl-nav.disabled + .owl-dots {
     margin: 0;
 }
 
-.owl-theme .owl-dots .owl-dot span {
+.home-carousel.owl-theme .owl-dots .owl-dot span {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -170,21 +173,21 @@
     color: var(--color-accent);
 }
 
-.owl-theme .owl-dots .owl-dot span::after {
-    content: counter(count 1);
-}
-
-.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+.home-carousel.owl-theme .owl-dots .owl-dot.active span,
+.home-carousel.owl-theme .owl-dots .owl-dot:hover span {
     background-color: var(--color-accent) !important;
     color: black;
 }
 
 .home__container {
     display: flex;
-    position: absolute;
+    position: relative;
     flex-direction: column;
-    align-items: baseline;
-    z-index: 4;
+    align-items: flex-start;
+    pointer-events: none;
+    z-index: 2;
+    padding: 2rem 1rem;
+    max-width: 1320px;
 }
 
 .home__container h2 {
@@ -193,6 +196,7 @@
     font-size: 4.5rem;
     font-weight: bold;
     color: var(--color-white);
+    margin-bottom: 1.5rem;
 }
 
 .home__container a {
@@ -207,6 +211,9 @@
     font-weight: bold;
     padding: 0.75rem;
     transition: all 0.4s;
+    pointer-events: all;
+    text-decoration: none;
+    color: black;
 }
 
 .home__container a:hover {
@@ -214,22 +221,77 @@
     cursor: pointer;
 }
 
+.arrow__down {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    z-index: 3;
+    transition: transform 0.3s ease;
+}
+
+.arrow__down:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    animation: bounce 1s infinite;
+}
+
+.arrow__down img {
+    height: 30px;
+    width: 40px;
+    animation: bounce 1s infinite;
+}
+
+.home__degrade {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.home__degrade img {
+    width: 100%;
+    height: 50%;
+    display: block;
+}
+
 /* BIO */
 
 .bio {
-    background-color: #000;
+    background-color: var(--color-transparent-dark);
 }
 
 .c__bio {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
     display: flex;
     color: var(--color-white);
     align-items: center;
     flex-direction: column;
 }
 
-.c__bio h2 {
+.bio__title {
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    color: var(--color-accent);
+}
+
+/* Accordion */
+
+.accordion__container {
+    display: flex;
+    margin-top: 5rem;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.accordion__title {
+    font-size: 2.25rem;
     font-weight: bold;
     color: var(--color-accent);
+    margin-bottom: 1.5rem;
 }
 
 .accordion {
@@ -237,6 +299,19 @@
     flex-direction: column;
     gap: 1rem;
     width: 100%;
+}
+
+.accordion-item {
+    border: none;
+}
+
+.accordion-button {
+    border-radius: 10px;
+}
+
+.accordion-button:focus {
+    outline: none;
+    box-shadow: none;
 }
 
 .accordion-header {
@@ -249,6 +324,7 @@
     font-size: 21px;
     color: var(--color-accent);
     box-shadow: none;
+    outline: none;
 }
 
 .accordion-button:not(.collapsed) {
@@ -261,6 +337,199 @@
 .accordion-body {
     background-color: var(--color-primary-darker);
     color: var(--color-white);
+}
+
+.accordion-button::after {
+    content: "";
+    width: 2rem;
+    height: 2rem;
+    background-color: var(--color-accent);
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='white' viewBox='0 0 24 24'%3E%3Cpath d='M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z'/%3E%3C/svg%3E");
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='white' viewBox='0 0 24 24'%3E%3Cpath d='M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z'/%3E%3C/svg%3E");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
+    background-repeat: no-repeat;
+    transition: transform 0.3s ease-in-out;
+}
+
+.accordion-button.collapsed::after {
+    transform: rotate(0deg);
+}
+
+.accordion-button:not(.collapsed)::after {
+    transform: rotate(180deg);
+}
+
+/* CHARACTERS CAROUSEL – Cavaleiros de Ouro */
+
+.c__characters {
+    padding: 4rem 1rem;
+    background-color: var(--color-transparent-dark);
+    text-align: center;
+}
+
+.c__characters__container {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.c__characters__title {
+    font-family: var(--font-primary);
+    font-size: 2.25rem;
+    font-weight: bold;
+    color: var(--color-accent);
+    margin-bottom: 2rem;
+}
+
+.c__characters__carousel {
+    width: 100%;
+}
+
+.c__characters__carousel .owl-stage {
+    padding: 1rem 0;
+}
+
+.c__characters__carousel .owl-item {
+    display: flex;
+    justify-content: center;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+.c__characters__item {
+    height: 380px;
+    width: 190px;
+    background-color: #1a1a1a;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 3px solid rgba(255, 255, 255, 0.2);
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s ease;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 1rem;
+}
+
+.c__characters__item:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.c__characters__name {
+    font-family: var(--font-primary);
+    font-weight: bold;
+    font-size: 1.3125rem;
+    color: var(--color-white);
+    padding: 0.5rem 0.75rem;
+    text-align: center;
+    width: 90%;
+    background: none;
+    border: none;
+    border-radius: 0;
+}
+
+.c__characters__carousel .owl-dots {
+    margin-top: 2rem;
+}
+
+.c__characters__carousel .owl-dot span {
+    background-color: #ccc;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.c__characters__carousel .owl-dot.active span {
+    background-color: var(--color-accent);
+}
+
+.mu_card {
+    background-image: url('../images/carrossel 01.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.aldebaran_card {
+    background-image: url('../images/carrossel 02.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.gemeos_card {
+    background-image: url('../images/carrossel 03.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.cancer_card {
+    background-image: url('../images/carrossel 04.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.leao_card {
+    background-image: url('../images/carrossel 05.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.virgem_card {
+    background-image: url('../images/carrossel 06.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.libra_card {
+    background-image: url('../images/carrossel 07.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.escorpiao_card {
+    background-image: url('../images/carrossel 08.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.sagitario_card {
+    background-image: url('../images/carrossel 09.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.capricornio_card {
+    background-image: url('../images/carrossel 10.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.aquario_card {
+    background-image: url('../images/carrossel 11.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.peixes_card {
+    background-image: url('../images/carrossel 12.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 @media (max-width: 768px) {

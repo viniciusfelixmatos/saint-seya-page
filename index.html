@@ -60,12 +60,12 @@
 
             <div class="home__container container-xl">
                 <h2>Conheça os Cavaleiros de Bronze, a base do exército da deusa Atena</h2>
-                <a>Veja mais</a>
+                <a class="btn-default">Veja mais</a>
             </div>
 
-            <div class="arrow__down">
+            <a href="#bio" class="arrow__down">
                 <img src="./images/seta destaque.png" alt="Seta para baixo">
-            </div>
+            </a>
 
             <div class="home__degrade">
                 <img src="./images/degradê destaque.png" alt="Degradê inferior da home">
@@ -73,7 +73,7 @@
 
         </section>
 
-        <section class="bio">
+        <section class="bio" id="bio">
             <div class="c__bio container-xl">
                 <h2 class="bio__title">Cavaleiros de Atena</h2>
                 <p>
@@ -151,96 +151,209 @@
                 <h2 class="c__characters__title">Os doze mais poderosos</h2>
 
                 <div class="owl-carousel owl-theme characters-carousel">
-                    <div class="c__characters__item mu_card">
-                        <span class="c__characters__name">Mu de Áries</span>
-                    </div>
-                    <div class="c__characters__item aldebaran_card">
-                        <span class="c__characters__name">Aldebaran de Touro</span>
-                    </div>
-                    <div class="c__characters__item gemeos_card">
-                        <span class="c__characters__name">Saga de Gêmeos</span>
-                    </div>
-                    <div class="c__characters__item cancer_card">
-                        <span class="c__characters__name">Máscara da Morte de Câncer</span>
-                    </div>
-                    <div class="c__characters__item leao_card">
-                        <span class="c__characters__name">Aiolia de Leão</span>
-                    </div>
-                    <div class="c__characters__item virgem_card">
-                        <span class="c__characters__name">Shaka de Virgem</span>
-                    </div>
-                    <div class="c__characters__item libra_card">
-                        <span class="c__characters__name">Dohko de Libra</span>
-                    </div>
-                    <div class="c__characters__item escorpiao_card">
-                        <span class="c__characters__name">Milo de Escorpião</span>
-                    </div>
-                    <div class="c__characters__item sagitario_card">
-                        <span class="c__characters__name">Aiolos de Sagitário</span>
-                    </div>
-                    <div class="c__characters__item capricornio_card">
-                        <span class="c__characters__name">Shura de Capricórnio</span>
-                    </div>
-                    <div class="c__characters__item aquario_card">
-                        <span class="c__characters__name">Camus de Aquário</span>
-                    </div>
-                    <div class="c__characters__item peixes_card">
-                        <span class="c__characters__name">Afrodite de Peixes</span>
-                    </div>
+                <div class="c__characters__item mu_card">
+                    <div class="degrade-overlay"></div>
+                    <span class="c__characters__name">Mu de Áries</span>
+                </div>
+                <div class="c__characters__item aldebaran_card">
+                    <div class="degrade-overlay"></div>
+                    <span class="c__characters__name">Aldebaran de Touro</span>
+                </div>
+                <div class="c__characters__item gemeos_card">
+                    <div class="degrade-overlay"></div>
+                    <span class="c__characters__name">Saga de Gêmeos</span>
+                </div>
+                <div class="c__characters__item cancer_card">
+                    <div class="degrade-overlay"></div>
+                    <span class="c__characters__name">Máscara da Morte de Câncer</span>
+                </div>
+                <div class="c__characters__item leao_card">
+                    <div class="degrade-overlay"></div>
+                    <span class="c__characters__name">Aiolia de Leão</span>
+                </div>
+                <div class="c__characters__item virgem_card">
+                    <div class="degrade-overlay"></div>
+                    <span class="c__characters__name">Shaka de Virgem</span>
+                </div>
+                <div class="c__characters__item libra_card">
+                    <div class="degrade-overlay"></div>
+                    <span class="c__characters__name">Dohko de Libra</span>
+                </div>
+                <div class="c__characters__item escorpiao_card">
+                    <div class="degrade-overlay"></div>
+                    <span class="c__characters__name">Milo de Escorpião</span>
+                </div>
+                <div class="c__characters__item sagitario_card">
+                    <div class="degrade-overlay"></div>
+                    <span class="c__characters__name">Aiolos de Sagitário</span>
+                </div>
+                <div class="c__characters__item capricornio_card">
+                    <div class="degrade-overlay"></div>
+                    <span class="c__characters__name">Shura de Capricórnio</span>
+                </div>
+                <div class="c__characters__item aquario_card">
+                    <div class="degrade-overlay"></div>
+                    <span class="c__characters__name">Camus de Aquário</span>
+                </div>
+                <div class="c__characters__item peixes_card">
+                    <div class="degrade-overlay"></div>
+                    <span class="c__characters__name">Afrodite de Peixes</span>
+                </div>
                 </div>
             </div>
         </section>
 
         <section class="c__houses">
-            <divc class="c__houses__box">
+            <div class="c__houses__box container-xl limited-width">
                 <h2>As doze casas</h2>
+
                 <div class="owl-carousel owl-theme houses-carousel">
                     <div class="item aries-house">
-                        <a href="image-a.jpeg" data-fancybox data-caption="Single image">
-                            <img src="./images/fancybox 01 casa_aries.png" />
+                        <a href="./images/fancybox 01 casa_aries.png" data-fancybox="houses" data-caption="Casa de Áries">
+                            <img src="./images/fancybox 01 casa_aries.png" alt="Casa de Áries" />
                         </a>
                     </div>
-                    <div class="item touro-house"></div>
-                    <div class="item gemeos-house"></div>
-                    <div class="item cancer-house"></div>
-                    <div class="item leao-house"></div>
-                    <div class="item virgem-house"></div>
-                    <div class="item libra-house"></div>
-                    <div class="item escorpiao-house"></div>
-                    <div class="item sagitario-house"></div>
-                    <div class="item capricornio-house"></div>
-                    <div class="item aquario-house"></div>
-                    <div class="item peixes-houses"></div>
+                    <div class="item touro-house">
+                        <a href="./images/fancybox 02 casa_touro.png" data-fancybox="houses" data-caption="Casa de Touro">
+                            <img src="./images/fancybox 02 casa_touro.png" alt="Casa de Touro" />
+                        </a>
+                    </div>
+                    <div class="item gemeos-house">
+                        <a href="./images/fancybox 03 casa_gemeos.png" data-fancybox="houses" data-caption="Casa de Gêmeos">
+                            <img src="./images/fancybox 03 casa_gemeos.png" alt="Casa de Gêmeos" />
+                        </a>
+                    </div>
+                    <div class="item cancer-house">
+                        <a href="./images/fancybox 04 casa_cancer.png" data-fancybox="houses" data-caption="Casa de Câncer">
+                            <img src="./images/fancybox 04 casa_cancer.png" alt="Casa de Câncer" />
+                        </a>
+                    </div>
+                    <div class="item leao-house">
+                        <a href="./images/fancybox 05 casa_leao.png" data-fancybox="houses" data-caption="Casa de Leão">
+                            <img src="./images/fancybox 05 casa_leao.png" alt="Casa de Leão" />
+                        </a>
+                    </div>
+                    <div class="item virgem-house">
+                        <a href="./images/fancybox 06 casa_virgem.png" data-fancybox="houses" data-caption="Casa de Virgem">
+                            <img src="./images/fancybox 06 casa_virgem.png" alt="Casa de Virgem" />
+                        </a>
+                    </div>
+                    <div class="item libra-house">
+                        <a href="./images/fancybox 07 casa_libra.png" data-fancybox="houses" data-caption="Casa de Libra">
+                            <img src="./images/fancybox 07 casa_libra.png" alt="Casa de Libra" />
+                        </a>
+                    </div>
+                    <div class="item escorpiao-house">
+                        <a href="./images/fancybox 08 casa_escorpiao.png" data-fancybox="houses" data-caption="Casa de Escorpião">
+                            <img src="./images/fancybox 08 casa_escorpiao.png" alt="Casa de Escorpião" />
+                        </a>
+                    </div>
+                    <div class="item sagitario-house">
+                        <a href="./images/fancybox 09 casa_sagitario.png" data-fancybox="houses" data-caption="Casa de Sagitário">
+                            <img src="./images/fancybox 09 casa_sagitario.png" alt="Casa de Sagitário" />
+                        </a>
+                    </div>
+                    <div class="item capricornio-house">
+                        <a href="./images/fancybox 10 casa_capricornio.png" data-fancybox="houses" data-caption="Casa de Capricórnio">
+                            <img src="./images/fancybox 10 casa_capricornio.png" alt="Casa de Capricórnio" />
+                        </a>
+                    </div>
+                    <div class="item aquario-house">
+                        <a href="./images/fancybox 11 casa_aquario.png" data-fancybox="houses" data-caption="Casa de Aquário">
+                            <img src="./images/fancybox 11 casa_aquario.png" alt="Casa de Aquário" />
+                        </a>
+                    </div>
+                    <div class="item peixes-house">
+                        <a href="./images/fancybox 12 casa_peixes.png" data-fancybox="houses" data-caption="Casa de Peixes">
+                            <img src="./images/fancybox 12 casa_peixes.png" alt="Casa de Peixes" />
+                        </a>
+                    </div>
+
                 </div>
 
                 <div class="slider-nav">
-                    <button class="am-next btn-default">
-                        <i class="bi bi-chevron-left"></i>
-                    </button>
-                    <button class="am-prev btn-default">
-                        <i class="bi bi-chevron-right"></i>
-                    </button>
+                    <button class="am-next btn-carousel arrow-left"></button>
+                    <button class="am-prev btn-carousel arrow-right"></button>
+                </div>
+
+                <div class="c__houses__description mt-4">
+                    <p>
+                        <strong>A Casa de Áries:</strong> é a primeira casa zodiacal, sendo o destaque para a arquitetura do telhado em forma de cúpulas Amrud.
+                        Na luta de Dohko e Shion, uma cratera foi aberta nessa casa.
+                    </p>
                 </div>
 
             </div>
         </section>
 
+        <section class="c__join">
+            <div class="c__join__container container-xl">
+                <h2 class="c__join__title">Seja um cavaleiro!</h2>
 
+                <form class="c__join__form" action="#" method="POST">
+                    <div class="c__form__row">
+                        <div class="c__form__group large_group">
+                            <label for="name">Nome:</label>
+                            <input type="text" id="name" name="name" required
+                                pattern="[A-Za-zÀ-ÿ\s]+" title="Use apenas letras e espaços.">
+                        </div>
+                        <div class="c__form__group large_group">
+                            <label for="email">E-mail:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                    </div>
+
+                    <div class="c__form__row">
+                        <div class="c__form__group small_group">
+                            <label for="idade">Idade:</label>
+                            <input type="text" id="idade" name="idade" required
+                                pattern="^[1-9][0-9]?$" title="Digite uma idade válida entre 1 e 99.">
+                        </div>
+                        <div class="c__form__group small_group">
+                            <label for="altura">Altura:</label>
+                            <input type="text" id="altura" name="altura" required
+                                pattern="^\d{1}\.\d{2}$" title="Use o formato 0.00 (ex: 1.75)">
+                        </div>
+                        <div class="c__form__group small_group">
+                            <label for="peso">Peso:</label>
+                            <input type="text" id="peso" name="peso" required
+                                pattern="^\d{2,3}(\.\d{1,2})?$" title="Use apenas números (ex: 70 ou 70.5)">
+                        </div>
+                        <div class="c__form__group small_group">
+                            <label for="nascimento">Dia do nascimento:</label>
+                            <input type="text" id="nascimento" name="nascimento" required
+                                pattern="^(0[1-9]|[12][0-9]|3[01])[-\/](0[1-9]|1[0-2])$" title="Formato DD/MM ou DD-MM (ex: 25/12)">
+                        </div>
+                    </div>
+
+                    <div class="c__form__row">
+                        <div class="c__form__group small_group" id="grupo_sangue">
+                            <label for="sangue">Tipo sanguíneo:</label>
+                            <input type="text" id="sangue" name="sangue" required
+                                pattern="^(A|B|AB|O)[+-]$" title="Digite um tipo válido: A+, O-, AB+, etc.">
+                        </div>
+                        <div class="c__form__group medium_group">
+                            <label for="nasc_local">Local de nascimento:</label>
+                            <input type="text" id="nasc_local" name="nasc_local" required
+                                pattern="[A-Za-zÀ-ÿ\s]+" title="Use apenas letras e espaços.">
+                        </div>
+                        <div class="c__form__group medium_group">
+                            <label for="treino_local">Local de treinamento:</label>
+                            <input type="text" id="treino_local" name="treino_local" required
+                                pattern="[A-Za-zÀ-ÿ\s]+" title="Use apenas letras e espaços.">
+                        </div>
+                    </div>
+
+                    <div class="c__form__button">
+                        <button type="submit" class="btn-default btn-form">Registre-se</button>
+                    </div>
+                </form>
+            </div>
+        </section>
 
     </main>
 
     <footer></footer>
-
-    <script>
-        function contador () {
-        const buttonsowl = document.querySelectorAll(".owl-dot");
-        console.log(buttonsowl);
-
-        for (var i = 0; i < buttonsowl.length; i++) {
-            console.log(i)
-        }
-    }
-    </script>
 
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
@@ -248,20 +361,6 @@
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
     <script src="js/script.js"></script>
 
-
-    <script>
-
-        function contador() {
-            const buttonsowl = document.querySelectorAll(".owl-dot");
-            console.log(buttonsowl);
-
-            for (var i = 0; i < buttonsowl.length; i++) {
-                console.log(i)
-            };
-        }
-
-        contador();
-    </script>
 </body>
 
 </html>

@@ -17,8 +17,9 @@ $('.home-carousel').owlCarousel({
     center: true,
     margin: 10,
     dots: true,
-    touchDrag: false,
-    mouseDrag: false,
+    autoWidth: true,
+    touchDrag: true,
+    mouseDrag: true,
     responsive: {
         0: { items: 1 },
         600: { items: 1 },

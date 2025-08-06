@@ -892,40 +892,6 @@
     font-size: 1rem;
 }
 
-/* Footer */
-
-.c__links {
-    background-color: var(--color-primary-deepest);
-}
-
-.c__links__box {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-top: 5rem;
-    padding-bottom: 5rem;
-    gap: 200px;
-}
-
-.footer__links ul {
-    gap: 24px;
-}
-
-.footer__links ul li {
-    font-style: var(--font-primary);
-    font-weight: bold;
-    list-style: none;
-    color: var(--color-accent);
-    font-size: 21px;
-<<<<<<< HEAD
-<<<<<<< HEAD
-    width: 300px;
-=======
->>>>>>> b8b3826c8871b5f6da39e37a5bbbad22dfa13497
-=======
->>>>>>> b8b3826c8871b5f6da39e37a5bbbad22dfa13497
-}
-
 @media (max-width: 1024px) {
 
     .c__links__box {
@@ -1112,16 +1078,14 @@
         width: 100%
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+    .footer__links ul li {
+        width: 100%
+    }
+
     .home {
         align-items: center;
     }
 
-=======
->>>>>>> b8b3826c8871b5f6da39e37a5bbbad22dfa13497
-=======
->>>>>>> b8b3826c8871b5f6da39e37a5bbbad22dfa13497
     .home__container {
         height: 70%;
         top: 0;

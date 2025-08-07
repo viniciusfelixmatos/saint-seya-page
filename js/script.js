@@ -63,39 +63,65 @@ $('.houses-carousel').owlCarousel({
     }
 });
 
-// Mensagem personalizada para os inputs do formulário de cadastro
-document.addEventListener('DOMContentLoaded', function () {
-    const form = document.querySelector('.c__join__form');
-    if (!form) return;
+$(document).ready(function($) {
+    $('#altura').mask('9,99m');  
+});
 
-    const fields = [
-        { id: 'name', message: 'Por favor, use apenas letras e espaços para o nome.' },
-        { id: 'email', message: 'Digite um e-mail válido.' },
-        { id: 'idade', message: 'Digite uma idade entre 1 e 99.' },
-        { id: 'altura', message: 'Digite sua altura no formato 0.00 (ex: 1.75).' },
-        { id: 'peso', message: 'Digite um peso válido, como 70 ou 70.5.' },
-        { id: 'nascimento', message: 'Formato válido: DD/MM ou DD-MM (ex: 25/12).' },
-        { id: 'sangue', message: 'Exemplos válidos: A+, O-, AB+, etc.' },
-        { id: 'nasc_local', message: 'Use apenas letras e espaços.' },
-        { id: 'treino_local', message: 'Use apenas letras e espaços.' }
-    ];
+const formcvz = document.querySelector('.c__join__form')
 
-    fields.forEach(field => {
-        const input = document.getElementById(field.id);
-        if (!input) return;
+const inputs = [
+    {
+        input: document.getElementById("name"),
+        errorMessage: document.getElementById("name-id")
+    },
+    {
+        input: document.getElementById("email"),
+        errorMessage: document.getElementById("email-id")
+    },
+    {
+        input: document.getElementById("idade"),
+        errorMessage: document.getElementById("idade-id")
+    },
+    {
+        input: document.getElementById("altura"),
+        errorMessage: document.getElementById("altura-id")
+    },
+    {
+        input: document.getElementById("peso"),
+        errorMessage: document.getElementById("peso-id")
+    },
+    {
+        input: document.getElementById("nascimento"),
+        errorMessage: document.getElementById("nascimento-id")
+    },
+    {
+        input: document.getElementById("sangue"),
+        errorMessage: document.getElementById("sangue-id")
+    },
+    {
+        input: document.getElementById("nasc_local"),
+        errorMessage: document.getElementById("nascimento-id")
+    },
+    {
+        input: document.getElementById("treino_local"),
+        errorMessage: document.getElementById("treino-id")
+    }
+]
 
-        input.addEventListener('input', () => input.setCustomValidity(''));
+console.log(inputs);
 
-        input.addEventListener('invalid', () => {
-            if (!input.validity.valid) {
-                input.setCustomValidity(field.message);
-            }
-        });
-    });
+formcvz.addEventListener('submit', (e) => {
+    e.preventDefault();
 
-    form.addEventListener('submit', function (e) {
-        if (!form.checkValidity()) {
-            e.preventDefault();
+    inputs.forEach(({input, errorMessage}) => {
+        if(input.value.trim() === '') {
+            errorMessage.style.display = 'flex';
+            input.style.borderColor = 'red';
+        } else {
+           errorMessage.style.display = 'flex';
+           input.style.borderColor = 'red';
         }
     });
 });
+
+

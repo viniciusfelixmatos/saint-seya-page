@@ -26,7 +26,7 @@
 
 <body>
     <header class="header-nav">
-        <section class="header-nav__container container-xl">
+        <section class="header-nav__container container-xxl">
             <div class="header-nav__content">
                 <h1 class="header-nav__logo">
                     <img src="images/logo.png" alt="Saint Seiya Logo" class="logo">
@@ -51,33 +51,44 @@
         <section class="home">
             <div class="owl-carousel owl-theme home-carousel">
                 <div class="item-one__carousel background__carousel">
+                    <div class="home__container container-xl">
+                        <h2>Conheça os Cavaleiros de Bronze, a base do exército da deusa Atena</h2>
+                        <a class="btn-default">Veja mais</a>
+                    </div>
                     <div class="home__degrade">
                         <img src="./images/degradê destaque.png" alt="Degradê inferior da home">
                     </div>
                 </div>
 
                 <div class="item-two__carousel background__carousel">
+                    <div class="home__container container-xl">
+                        <h2>Conheça os Cavaleiros de Bronze, a base do exército da deusa Atena</h2>
+                        <a class="btn-default">Veja mais</a>
+                    </div>
                     <div class="home__degrade">
                         <img src="./images/degradê destaque.png" alt="Degradê inferior da home">
                     </div>
                 </div>
 
                 <div class="item-three__carousel background__carousel">
+                    <div class="home__container container-xl">
+                        <h2>Conheça os Cavaleiros de Bronze, a base do exército da deusa Atena</h2>
+                        <a class="btn-default">Veja mais</a>
+                    </div>
                     <div class="home__degrade">
                         <img src="./images/degradê destaque.png" alt="Degradê inferior da home">
                     </div>
                 </div>
 
                 <div class="item-four__carousel background__carousel">
+                    <div class="home__container container-xl">
+                        <h2>Conheça os Cavaleiros de Bronze, a base do exército da deusa Atena</h2>
+                        <a class="btn-default">Veja mais</a>
+                    </div>
                     <div class="home__degrade">
                         <img src="./images/degradê destaque.png" alt="Degradê inferior da home">
                     </div>
                 </div>
-            </div>
-
-            <div class="home__container container-xl">
-                <h2>Conheça os Cavaleiros de Bronze, a base do exército da deusa Atena</h2>
-                <a class="btn-default">Veja mais</a>
             </div>
 
             <a href="#bio" class="arrow__down">
@@ -303,39 +314,45 @@
             <div class="c__join__container container-xl">
                 <h2 class="c__join__title">Seja um cavaleiro!</h2>
 
-                <form class="c__join__form" action="#" method="POST">
+                <form class="c__join__form" action="#" method="POST" id="form">
                     <div class="c__form__row">
                         <div class="c__form__group large_group">
                             <label for="name">Nome:</label>
                             <input type="text" id="name" name="name" required
-                                pattern="[A-Za-zÀ-ÿ\s]+" title="Use apenas letras e espaços.">
+                                pattern="[A-Za-zÀ-ÿ\s]+" title="Use apenas letras e espaços." placeholder="Nome completo">
+                            <p class="error-message" id="name-id">Preencha o campo!</p>
                         </div>
                         <div class="c__form__group large_group">
                             <label for="email">E-mail:</label>
-                            <input type="email" id="email" name="email" required>
+                            <input type="email" id="email" name="email" required placeholder="john@exemplo.com">
+                            <p class="error-message" id="email-id">Preencha o campo!</p>
                         </div>
                     </div>
 
                     <div class="c__form__row">
                         <div class="c__form__group small_group">
                             <label for="idade">Idade:</label>
-                            <input type="text" id="idade" name="idade" required
-                                pattern="^[1-9][0-9]?$" title="Digite uma idade válida entre 1 e 99.">
+                            <input type="number" id="idade" name="idade" required
+                                pattern="^[1-9][0-9]?$" title="Digite uma idade válida entre 1 e 99." placeholder="Ex: 18">
+                            <p class="error-message" id="idade-id">Preencha o campo!</p>
                         </div>
                         <div class="c__form__group small_group">
                             <label for="altura">Altura:</label>
                             <input type="text" id="altura" name="altura" required
-                                pattern="^\d{1}\.\d{2}$" title="Use o formato 0.00 (ex: 1.75)">
+                                pattern="^\d{1}\.\d{2}$" title="Use o formato 0.00 (ex: 1.75)" placeholder="Ex: 1,70">
+                            <p class="error-message" class="altura-id">Preencha o campo!</p>
                         </div>
                         <div class="c__form__group small_group">
                             <label for="peso">Peso:</label>
                             <input type="text" id="peso" name="peso" required
-                                pattern="^\d{2,3}(\.\d{1,2})?$" title="Use apenas números (ex: 70 ou 70.5)">
+                                pattern="^\d{2,3}(\.\d{1,2})?$" title="Use apenas números (ex: 70 ou 70.5)" placeholder="Ex: 85 kg">
+                            <p class="error-message" id="peso-id">Preencha o campo!</p>
                         </div>
                         <div class="c__form__group small_group">
                             <label for="nascimento">Dia do nascimento:</label>
-                            <input type="text" id="nascimento" name="nascimento" required
+                            <input type="date" id="nascimento" name="nascimento" required
                                 pattern="^(0[1-9]|[12][0-9]|3[01])[-\/](0[1-9]|1[0-2])$" title="Formato DD/MM ou DD-MM (ex: 25/12)">
+                            <p class="error-message" id="nascimento-id">Preencha o campo!</p>
                         </div>
                     </div>
 
@@ -343,17 +360,20 @@
                         <div class="c__form__group small_group" id="grupo_sangue">
                             <label for="sangue">Tipo sanguíneo:</label>
                             <input type="text" id="sangue" name="sangue" required
-                                pattern="^(A|B|AB|O)[+-]$" title="Digite um tipo válido: A+, O-, AB+, etc.">
+                                pattern="^(A|B|AB|O)[+-]$" title="Digite um tipo válido: A+, O-, AB+, etc." placeholder="Ex: A +">
+                            <p class="error-message" id="sangue-id">Preencha o campo!</p>
                         </div>
                         <div class="c__form__group medium_group">
                             <label for="nasc_local">Local de nascimento:</label>
                             <input type="text" id="nasc_local" name="nasc_local" required
-                                pattern="[A-Za-zÀ-ÿ\s]+" title="Use apenas letras e espaços.">
+                                pattern="[A-Za-zÀ-ÿ\s]+" title="Use apenas letras e espaços." placeholder="Ex: Fortaleza - CE">
+                            <p class="error-message" id="nascimento-id">Preencha o campo!</p>
                         </div>
                         <div class="c__form__group medium_group">
                             <label for="treino_local">Local de treinamento:</label>
                             <input type="text" id="treino_local" name="treino_local" required
-                                pattern="[A-Za-zÀ-ÿ\s]+" title="Use apenas letras e espaços.">
+                                pattern="[A-Za-zÀ-ÿ\s]+" title="Use apenas letras e espaços." placeholder="Ex: Athenas">
+                            <p class="error-message" id="treino-id">Preencha o campo!</p>
                         </div>
                     </div>
 
@@ -388,6 +408,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"> </script>
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
     <script src="js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
 
 </body>
 

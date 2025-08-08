@@ -63,65 +63,44 @@ $('.houses-carousel').owlCarousel({
     }
 });
 
-$(document).ready(function($) {
-    $('#altura').mask('9,99m');  
+// Máscaras de entrada
+$(document).ready(function () {
+  $('#idade').mask('00');
+  $('#altura').mask('0,00');
+
+  $('#sangue').mask('S?X?[-+]', {
+    translation: {
+      'S': { pattern: /[ABO]/, optional: false },
+      'X': { pattern: /[B]/, optional: true },
+      '-': { pattern: /[-+]/, optional: false }
+    },
+    onKeyPress: function(val, e, field, options) {
+      field.val(field.val().toUpperCase());
+    }
+  });
 });
 
-const formcvz = document.querySelector('.c__join__form')
+// arquivo: script.js
+const form = document.getElementById('form');
 
-const inputs = [
-    {
-        input: document.getElementById("name"),
-        errorMessage: document.getElementById("name-id")
-    },
-    {
-        input: document.getElementById("email"),
-        errorMessage: document.getElementById("email-id")
-    },
-    {
-        input: document.getElementById("idade"),
-        errorMessage: document.getElementById("idade-id")
-    },
-    {
-        input: document.getElementById("altura"),
-        errorMessage: document.getElementById("altura-id")
-    },
-    {
-        input: document.getElementById("peso"),
-        errorMessage: document.getElementById("peso-id")
-    },
-    {
-        input: document.getElementById("nascimento"),
-        errorMessage: document.getElementById("nascimento-id")
-    },
-    {
-        input: document.getElementById("sangue"),
-        errorMessage: document.getElementById("sangue-id")
-    },
-    {
-        input: document.getElementById("nasc_local"),
-        errorMessage: document.getElementById("nascimento-id")
-    },
-    {
-        input: document.getElementById("treino_local"),
-        errorMessage: document.getElementById("treino-id")
+form.addEventListener('submit', function(event) {
+  event.preventDefault();
+
+  let isValid = true;
+
+  const inputs = form.querySelectorAll('input[required]');
+
+  inputs.forEach(function(input) {
+    const errorMessage = document.getElementById(input.id + '-id');
+
+    if (!input.value.trim()) {
+      errorMessage.style.display = 'block';
+      isValid = false;
+    } else {
+      errorMessage.style.display = 'none';
     }
-]
+  });
 
-console.log(inputs);
-
-formcvz.addEventListener('submit', (e) => {
-    e.preventDefault();
-
-    inputs.forEach(({input, errorMessage}) => {
-        if(input.value.trim() === '') {
-            errorMessage.style.display = 'flex';
-            input.style.borderColor = 'red';
-        } else {
-           errorMessage.style.display = 'flex';
-           input.style.borderColor = 'red';
-        }
-    });
 });
 
 
